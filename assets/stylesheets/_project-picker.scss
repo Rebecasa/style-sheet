@@ -1,0 +1,16 @@
+.project-selector {
+  background: #fff;
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 2rem;
+  border: 2px solid #000;
+}
+.project-selector input,
+.project-selector button {
+  width: 100%;
+}
+.project-selector input[type="text"],
+.project-selector button[type="text"] {
+  text-align: center;
+  font-size: 3rem;
+}
