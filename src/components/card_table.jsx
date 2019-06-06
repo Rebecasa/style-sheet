@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import AddTableForm from "./add_table_form";
-import Card from "./card";
-import AddCardForm from "./add_card_form";
+import Table from "./table";
 
 class CardTable extends Component {
   constructor(props) {
@@ -12,24 +11,18 @@ class CardTable extends Component {
   }
   handleClick = event => {
     this.setState({ hidediv: !this.state.hidediv });
-    console.log(event);
   };
   render() {
     return (
       <div className="card-table">
         {this.props.tables.map(table => (
-          <div className="table-item" key={table}>
-            {table}
-            <ul className="card-list">
-              {Object.keys(this.props.cards).map(key => (
-                <Card key={key} index={key} card={this.props.cards[key]} />
-              ))}
-              <AddCardForm
-                addCard={this.props.addCard}
-                table={this.props.table}
-              />
-            </ul>
-          </div>
+          <Table
+            className="table-item"
+            key={table}
+            table={table}
+            cards={this.props.cards}
+            addCard={this.props.addCard}
+          />
         ))}
         <div className="add-table">
           <span>

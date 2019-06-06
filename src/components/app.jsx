@@ -27,10 +27,11 @@ class App extends Component {
   };
 
   render() {
+    const tagline = this.props.location.pathname.split("/");
     return (
       <div>
         <div className="header">
-          <Header tagline="title" />
+          <Header tagline={tagline[2]} />
         </div>
         <CardTable
           tables={this.state.tables}
