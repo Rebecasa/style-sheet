@@ -15,20 +15,27 @@ class CardTable extends Component {
   render() {
     return (
       <div className="card-table">
-        {this.props.tables.map(table => (
+        {Object.keys(this.props.tables).map(key => (
           <Table
             className="table-item"
-            key={table}
-            table={table}
+            key={key}
+            index={key}
+            table={this.props.tables[key]}
             cards={this.props.cards}
+            tables={this.props.tables}
             addCard={this.props.addCard}
+            updateCard={this.props.updateCard}
+            deleteCard={this.props.deleteCard}
+            deleteTable={this.props.deleteTable}
           />
         ))}
         <div className="add-table">
           <span>
             {" "}
             NEW COLUMN
-            <button onClick={this.handleClick}>+</button>
+            <button onClick={this.handleClick} className="plus-sign">
+              +
+            </button>
           </span>
           <div hidden={this.state.hidediv}>
             <AddTableForm addTable={this.props.addTable}>

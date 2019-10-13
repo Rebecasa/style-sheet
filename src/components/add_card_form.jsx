@@ -15,6 +15,7 @@ class AddCardForm extends Component {
       checklist: this.checklistRef.current.value
     };
     this.props.addCard(card);
+    event.currentTarget.reset();
   };
 
   render() {
@@ -42,3 +43,4 @@ class AddCardForm extends Component {
 }
 
 export default AddCardForm;
+

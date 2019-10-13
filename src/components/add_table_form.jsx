@@ -15,7 +15,7 @@ class AddTableForm extends Component {
     return (
       <form className="table-edit" onSubmit={this.createTable}>
         <input
-          name="table-title"
+          name="title"
           ref={this.tableTitleRef}
           type="text"
           placeholder="Title"

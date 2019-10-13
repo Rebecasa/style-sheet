@@ -10,3 +10,25 @@
   margin-bottom: 20px;
 }
 
+.delete-button {
+  border: none;
+  font-weight: 700;
+  background-color: $button-background;
+   &:hover {
+    font-size: 21px;
+    cursor: pointer;
+  }
+}
+.delete-project {
+  border: none;
+  font-weight: 700;
+  background-color: $white;
+   &:hover {
+    font-size: 21px;
+    cursor: pointer;
+  }
+}
+
+.delete-card {
+  width: 33% !important;
+}

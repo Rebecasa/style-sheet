@@ -1,4 +1,43 @@
-.card {
-  min-height: fit-content;
-  background-color: white;
+.card-edit {
+  min-width: 260px;
+  margin-bottom: 20px;
+  border: 2px solid $black;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.card-edit input,
+.card-edit textarea,
+.card-edit select {
+  width: 33.33%;
+  padding: 10px;
+  line-height: 1;
+  font-size: 1.2rem;
+  border: 0;
+  border-bottom: 1px solid $black;
+  border-right: 1px solid $black;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 0;
+  background: $white;
+}
+.card-edit input:focus,
+.card-edit textarea:focus,
+.card-edit select:focus {
+  outline: 0;
+  background: $input-color;
+}
+.card-edit textarea {
+  width: 100%;
+}
+.card-edit input:last-of-type {
+  width: 100%;
+}
+.card-edit button {
+  width: 100%;
+  border: 0;
 }

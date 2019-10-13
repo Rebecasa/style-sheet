@@ -1,9 +1,9 @@
 .project-selector {
-  background: #fff;
+  background: $white;
   max-width: 500px;
   margin: 50px auto;
   padding: 2rem;
-  border: 2px solid #000;
+  border: 2px solid $black;
 }
 .project-selector input,
 .project-selector button {
@@ -13,4 +13,19 @@
 .project-selector button[type="text"] {
   text-align: center;
   font-size: 3rem;
+}
+
+.project-list {
+  background: $white;
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 2rem;
+  border: 2px solid $black;
+  li {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    font-size: 3rem;
+    margin-bottom: 5px;
+  }
 }
