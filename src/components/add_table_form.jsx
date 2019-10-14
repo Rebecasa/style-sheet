@@ -20,7 +20,9 @@ class AddTableForm extends Component {
           type="text"
           placeholder="Title"
         />
-        <button type="submit">Add Column</button>
+        <div className='add-columns-button'>
+          <button type="submit">Add Column</button>
+        </div>
       </form>
     );
   }

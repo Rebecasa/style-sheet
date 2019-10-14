@@ -35,7 +35,7 @@ class CardTable extends Component {
           <span>
             {" "}
             NEW COLUMN
-            <button onClick={this.handleClick}>+</button>
+            <button className='plus-button' onClick={this.handleClick}>+</button>
           </span>
           <div hidden={this.state.hidediv}>
             <AddTableForm addTable={this.props.addTable}>

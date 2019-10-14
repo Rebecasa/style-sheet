@@ -3,11 +3,23 @@
 }
 
 .table-item {
+  text-align: center;
   min-width: 200px;
+  max-width: 400px;
   list-style: none;
 }
 
 .add-table {
   display: flex;
   flex-direction: column;
+  margin-left: 38px;
+  text-align: center;
+}
+
+.plus-button {
+  border: none;
+  background-color: #E5E5E5;
+  &:focus {
+    outline-color: #E5E5E5
+  }
 }
