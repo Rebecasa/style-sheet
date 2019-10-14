@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import AddTableForm from "./add_table_form";
-import Card from "./card";
-import AddCardForm from "./add_card_form";
+import Table from "./table";
 
 class CardTable extends Component {
   constructor(props) {
@@ -12,30 +11,31 @@ class CardTable extends Component {
   }
   handleClick = event => {
     this.setState({ hidediv: !this.state.hidediv });
-    console.log(event);
   };
   render() {
     return (
       <div className="card-table">
-        {this.props.tables.map(table => (
-          <div className="table-item" key={table}>
-            {table}
-            <ul className="card-list">
-              {Object.keys(this.props.cards).map(key => (
-                <Card key={key} index={key} card={this.props.cards[key]} />
-              ))}
-              <AddCardForm
-                addCard={this.props.addCard}
-                table={this.props.table}
-              />
-            </ul>
-          </div>
+        {Object.keys(this.props.tables).map(key => (
+          <Table
+            className="table-item"
+            key={key}
+            index={key}
+            table={this.props.tables[key]}
+            cards={this.props.cards}
+            tables={this.props.tables}
+            addCard={this.props.addCard}
+            updateCard={this.props.updateCard}
+            deleteCard={this.props.deleteCard}
+            deleteTable={this.props.deleteTable}
+          />
         ))}
         <div className="add-table">
           <span>
             {" "}
             NEW COLUMN
-            <button className='plus-button' onClick={this.handleClick}>+</button>
+            <button onClick={this.handleClick} className="plus-sign">
+              +
+            </button>
           </span>
           <div hidden={this.state.hidediv}>
             <AddTableForm addTable={this.props.addTable}>

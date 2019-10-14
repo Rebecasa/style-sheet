@@ -16,10 +16,27 @@
   text-align: center;
 }
 
-.plus-button {
-  border: none;
-  background-color: #E5E5E5;
-  &:focus {
-    outline-color: #E5E5E5
+
+.table-edit {
+  border: 2px solid $black;
+  max-width: 259px;
+   button {
+    width: 100%;
+    border: 0;
   }
+}
+
+.plus-sign {
+  border: none;
+  font-weight: 700;
+  background-color: $button-background;
+  &:hover {
+    font-size: 21px;
+    cursor: pointer;
+  }
+}
+
+.card-list {
+  max-width: 330px;
+  padding-top: 15px;
 }
