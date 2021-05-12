@@ -24,7 +24,7 @@
     "autoprefixer-stylus": "0.14.0",
     "babel-preset-stage-0": "^6.24.1",
     "firebase": "^5.7.0",
-    "grpc": "^1.24.0",
+    "grpc": "^1.24.9",
     "history": "^4.7.2",
     "prop-types": "^15.6.0",
     "re-base": "4.0.0",
